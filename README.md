@@ -4,6 +4,10 @@ UBB Design Patterns repository for university year 2018-2019
 
 ## Lab 1
 
+### Prerequisites: 
+- Java 8: https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+- Gradlew 5: https://gradle.org/install/ 
+
 ### Ex. 1.1. Encapsulation
 We will want to read information from a file and interpret this information via a Service.
 Using the Single-Responsibility principle from SOLID, please create 2 Services:
