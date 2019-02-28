@@ -42,6 +42,34 @@
 
       {{ content }}
 
+        <ul class="post-list">
+          {% for post in site.posts %}
+          <li>
+
+            <div class="post-container-outer">
+
+              <div class="post-container-inner">
+          <span class="post-meta">
+            {{ post.date | date: "%b %-d, %Y" }} • <i>{{ post.categories }}</i>
+          </span>
+                <br/>
+                <b><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></b>
+              </div>
+
+              {% if post.preview-img %}
+              <a href="{{ post.url | relative_url }}"><img src={{post.preview-img}}></a>
+              {% endif %}
+
+              {% if post.preview-video-youtube %}
+              <iframe src="{{post.preview-video-youtube}}" allowfullscreen></iframe>
+              {% endif %}
+
+            </div>
+
+          </li>
+          {% endfor %}
+        </ul>
+
       </section>
       <footer>
         {% if site.github.is_project_page %}
